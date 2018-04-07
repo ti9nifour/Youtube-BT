@@ -1,0 +1,63 @@
+
+<!--subscription button style no:01 by ba88-->
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<div id='subscription-button'>
+<div class='sub-box-ba'>
+<a class='ysclose' href='javascript:void(0);'/>
+
+
+<h1>) بضغطة زر تدعمنا وتشارك الفائدة</h1>
+
+<div class='btn-ytsubscribe'>
+<script src='https://apis.google.com/js/platform.js' type='text/javascript'/>
+<div class='g-ytsubscribe' data-channelid='UCugG1qa1O9kim4fS-kvKM9w' data-count='default' data-layout='full'/>
+</div>
+</div>
+</div>
+<style type='text/css'>
+#subscription-button{overflow:hidden;z-index:9999;position:fixed!important;top:-1000px;left:0;right:0;padding:50px 0;display:none;width:100%;height:100%;background-color:rgba(0,0,0,0.49);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+#subscription-button .sub-box-ba{position:relative;padding:1em;margin:0 auto;max-width:250px;width:100%;background:#FFFFFF;}
+#subscription-button .sub-box-ba:before{content:&#39;&#39;;position:absolute;top:0;right:0;width:100%;height:45%;background:#e62117 url(https://3.bp.blogspot.com/-tphCZuxmiVs/WdTtBWr8S-I/AAAAAAAABxI/ZCz_hkPtoccH7fOVw7yqFC-WTEeTrgVXACLcBGAs/s1600/pattern-you-tube.png);}
+#subscription-button a.ysclose{overflow:hidden;position:absolute;top:0;right:0;text-align:center;color:#FFFFFF;cursor:pointer;padding:5px;line-height:1;margin:0;}
+#subscription-button a.ysclose:before{content:&#39;\f00d&#39;;font-family:Raleway,jsbold;font-size:17px;position:relative;}
+#subscription-button a.ysclose:hover:before{content:&quot;\f068&quot;;}
+#subscription-button h1{position:relative;line-height:normal;text-shadow:none;margin:15px 0;padding:0 5px 0 20px;font-size:14px;text-align:center;display:block;font-weight:700;color:#ffffff;z-index:2;text-decoration: none;letter-spacing: normal;font-family: Raleway,jsbold;}
+.btn-ytsubscribe{position:relative;overflow:hidden;margin:5px 10px;z-index:2;}
+.yt-username{display:block;height:23px;color:#ffffff;font-weight:700;white-space:nowrap;}
+</style>
+<script type='text/javascript'>
+    //<![CDATA[ 
+$(document).ready(function() {  
+    if (document.cookie.indexOf('visited=true') == -1) {
+            var fifteenDays = 1000*60*60*24*0.5;
+            var expires = new Date((new Date()).valueOf() + fifteenDays);
+            document.cookie = "visited=true;expires=" + expires.toUTCString();
+            var id = '#subscription-button';
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+            //Set heigth and width to mask to fill up the whole screen
+            $('#subscription-button').css({'width':maskWidth,'height':maskHeight});
+            //transition effect     
+            $('#subscription-button').fadeIn(1000);    
+            $('#subscription-button').fadeTo("slow");  
+            //Get the window height and width
+            var winH = $(document).height();
+            var winW = $(window).width();
+            //Set the popup window to center
+            $(id).css('top',  winH/2-$(id).height()/2);
+            $(id).css('left', winW/2-$(id).width()/2);
+            //transition effect
+            $(id).fadeIn(2000);
+            //if close button is clicked
+            $('a.ysclose').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+                $('#subscription-button').fadeOut();
+            });         
+    }   
+});
+    //]]>  
+    </script> 
+</b:if> 
+
